@@ -19,9 +19,10 @@ public class Ejercicio2 {
         String diasSemana[]={"lunes","martes","miercoles","jueves","viernes","sabado","domingo"};
         double suma = 0,max=0,min=0;
         int dia,posMax=0,posMin=0;
+        boolean seguir = true;
         Scanner sc = new Scanner(System.in);
         sc.useLocale(Locale.ENGLISH);
-
+        do {
         System.out.println("Anota temperatura de la semana");
 
         for (int i = 0; i < temperaturas.length; i++) {
@@ -53,6 +54,11 @@ public class Ejercicio2 {
         } while (dia<1 || dia>7);
         
         System.out.println("La temperatura fue "+ temperaturas[dia-1] );
+        
+        System.out.println("Deseas repetir el ejercicio? (true/false)");
+        seguir = sc.nextBoolean();
+        
+        } while (seguir == true);
     }
     
 }
